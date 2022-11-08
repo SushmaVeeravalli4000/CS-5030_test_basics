@@ -26,13 +26,27 @@ class todoservice{
         return this.todos = todo;
     }
 
-    delete_todo(id){
-        // Your code here
+
+    delete_todo(id) {
+        var data = this.todos;
+        for (var i in data.todo) {
+            if (data.todo[i].title === id) {
+                delete data.todo[i];
+            }
+        }
+        return data;
     }
 
-    update_todo(id, todo){
-        // Your code here
+    update_todo(id, todo) {
+        var data = this.todos;
+        for (var i in data.todo) {
+            if (data.todo[i].title === id) {
+                data.todo[i] = todo;
+            }
+        }
+        return data;
     }
+
 }
 
 
