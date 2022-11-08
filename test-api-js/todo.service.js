@@ -22,8 +22,8 @@ class todoservice{
         return this.todos;
     }
 
-    add_todo(todo){
-        // Your code here
+    add_todo(todo) {
+        return this.todos = todo;
     }
 
     delete_todo(id){
