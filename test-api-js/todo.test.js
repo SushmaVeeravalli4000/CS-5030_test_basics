@@ -35,4 +35,20 @@ describe('todo test suite', () => {
         expect(todo_service.add_todo(testData).todo.length).toEqual(2);
     });
 
+    
+//delete method
+    test("delete_todos", () => {
+        expect(todo_service.delete_todo("Brad").todo[0].title).toEqual("Tom");
+    });
+
+    // update method
+    test("update_todos", () => {
+        var data = {
+            "title": "Brad",
+            "description": "Testing",
+            "done": true
+        }
+        expect(todo_service.update_todo("Tom", data).todo[0].description).toEqual("Testing");
+    });
+
 });
